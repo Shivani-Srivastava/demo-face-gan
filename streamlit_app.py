@@ -134,7 +134,7 @@ def load_pg_gan_model():
     Create the tensorflow session.
     """
     # Open a new TensorFlow session.
-    config = tf.ConfigProto(allow_soft_placement=True)
+    config = tf.compat.v1.ConfigProto(allow_soft_placement=True)
     session = tf.Session(config=config)
 
     # Must have a default TensorFlow session established in order to initialize the GAN.
